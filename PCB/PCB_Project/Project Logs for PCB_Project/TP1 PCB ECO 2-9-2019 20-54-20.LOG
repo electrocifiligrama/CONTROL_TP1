@@ -1,0 +1,6 @@
+Added Component: Designator=POWER(MOLEX2)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=POWER-1
+Added Pin To Net: NetName=VCC Pin=POWER-2
+Added Member To Class: ClassName=TP1 Member=Component POWER MOLEX2
+Added Room: Name=TP1

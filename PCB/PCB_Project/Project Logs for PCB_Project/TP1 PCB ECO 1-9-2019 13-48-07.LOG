@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=NetC5_2 Pin=C5-2
+Removed Pin From Net: NetName=NetIN_2 Pin=R7-1
+Removed Pin From Net: NetName=GND Pin=R7-3
+Change Component Comment : Designator=C5 Old Comment=CAPPOL New Comment=10uf
+Added Component: Designator=R7(PRESET V)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetC5_2 Pin=C5-1
+Added Pin To Net: NetName=NetIN_2 Pin=R7-1
+Added Pin To Net: NetName=GND Pin=R7-3
+Change Net Name : Old Net Name=NetC5_2 New Net Name=NetC5_1
+Added Pin To Net: NetName=NetC5_2 Pin=C5-2
+Added Pin To Net: NetName=NetC5_2 Pin=R7-2
+Added Net: Name=NetC5_2
+Added Room: Name=TP1

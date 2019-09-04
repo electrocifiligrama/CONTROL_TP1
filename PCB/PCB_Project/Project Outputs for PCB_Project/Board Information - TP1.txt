@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\Users\joa-m\Control\TP1\PCB\PCB_Project\TP1.PcbDoc
+Date         : 1/9/2019
+Time         : 13:52:25
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100,00%
+    Connections, 51
+    Connections routed, 51
+    Connections remaining, 0
+count : 4
