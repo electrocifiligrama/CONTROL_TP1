@@ -458,6 +458,74 @@ F_{2}(S)=\frac{S\cdot C\cdot R_{2}+1}{\frac{S}{\omega_{0}}+1};\omega_{0}=\frac{1
 
 \end_layout
 
+\begin_layout Standard
+Se procede a calcular la el filtro de salida 
+\begin_inset Formula $F_{0}(s)$
+\end_inset
+
+ para las distintas configuraciones posibles de 
+\begin_inset Formula $F(s)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Con 
+\begin_inset Formula $F(s)=F_{1}(s)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{V(s)}{\theta(S)}=\frac{K_{d}\cdot s}{\frac{s}{\omega_{0}}+1}\cdot\frac{1}{s+\frac{K_{d}\cdot K_{0}}{\frac{s}{w_{0}}+1}}=\frac{K_{d}\cdot s}{\frac{s}{\omega_{0}}+1}\cdot\frac{\frac{s}{\omega_{0}}+1}{\frac{s^{2}}{\omega_{0}}+s+}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+\frac{V(s)}{\theta(S)}=\frac{K_{d}\cdot s}{s^{2}\cdot(\tau_{1}+\tau_{2})+s\cdot(1+K_{d}\cdot K_{0}\tau_{2})+K_{d}\cdot K_{0}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Con 
+\begin_inset Formula $F(s)=F_{1}(s)$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula $\frac{V(s)}{\theta(S)}=K_{d}\cdot s\cdot\frac{s\cdot\tau_{2}+1}{s(\tau_{1}+\tau_{2})+1}\cdot\frac{1}{s+\frac{K_{d}\cdot K_{0}\cdot(s\cdot\tau_{2}+1)}{s\cdot(\tau_{1}+\tau_{2})+1}}=\frac{K_{d}\cdot s\cdot(s\cdot\tau_{2}+1)}{s^{2}\cdot(\tau_{1}+\tau_{2})+s+s\cdot\tau_{2}\cdot K_{d}\cdot K_{0}+K_{d}\cdot K_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+\frac{V(s)}{\theta(S)}=\frac{K_{d}\cdot s^{2}\cdot\tau_{2}+K_{d}\cdot s}{s^{2}\cdot(\tau_{1}+\tau_{2})+s\cdot(1+K_{d}\cdot K_{0}\tau_{2})+K_{d}\cdot K_{0}}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Mediciones y simulaciones
 \end_layout
