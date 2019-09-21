@@ -670,7 +670,7 @@ Entonces la transferencia completa del circuito para el caso
 
 \begin_layout Standard
 \align center
-\begin_inset Formula $\frac{V_{out}(s)}{V_{in}(s)}=\frac{V_{f}(s)}{\theta(s)}.F_{0}(s)=\frac{K_{d}s}{\frac{s^{2}}{\omega_{0}}+s+K_{d}K_{0}}.\frac{1}{\frac{s}{\omega_{p}}+1}=\frac{K_{d}s}{\frac{s^{3}}{\omega_{0}\omega_{p}}+s^{2}(\frac{1}{\omega_{0}}+\frac{1}{\omega_{p}})+s(1+\frac{K_{d}K_{0}}{\omega_{p}})+K_{d}K_{0}}$
+\begin_inset Formula $\frac{V_{out}(s)}{V_{in}(s)}=\frac{K_{0}}{s}.\frac{V_{f}(s)}{\theta(s)}.F_{0}(s)=\frac{K_{d}K_{0}}{\frac{s^{2}}{\omega_{0}}+s+K_{d}K_{0}}.\frac{1}{\frac{s}{\omega_{p}}+1}=\frac{K_{d}K_{0}}{\frac{s^{3}}{\omega_{0}\omega_{p}}+s^{2}(\frac{1}{\omega_{0}}+\frac{1}{\omega_{p}})+s(1+\frac{K_{d}K_{0}}{\omega_{p}})+K_{d}K_{0}}$
 \end_inset
 
 
@@ -680,7 +680,7 @@ Entonces la transferencia completa del circuito para el caso
 \align center
 \begin_inset Formula 
 \begin{equation}
-\frac{V_{out}(s)}{V_{in}(s)}=\frac{K_{d}s}{\frac{s^{3}}{\omega_{0}\omega_{p}}+s^{2}\frac{\omega_{p}+\omega_{0}}{\omega_{0}\omega_{p}}+s\frac{\omega_{p}+K_{d}K_{0}}{\omega_{p}}+K_{d}K_{0}}
+\frac{V_{out}(s)}{V_{in}(s)}=\frac{K_{d}K_{0}}{\frac{s^{3}}{\omega_{0}\omega_{p}}+s^{2}\frac{\omega_{p}+\omega_{0}}{\omega_{0}\omega_{p}}+s\frac{\omega_{p}+K_{d}K_{0}}{\omega_{p}}+K_{d}K_{0}}
 \end{equation}
 
 \end_inset
@@ -698,7 +698,19 @@ y para el caso
 
 \begin_layout Standard
 \align center
-\begin_inset Formula $\frac{V_{out}(s)}{V_{in}(s)}=\frac{V_{f}(s)}{\theta(s)}.F_{0}(s)=\frac{K_{d}\cdot s^{2}\cdot\tau_{2}+K_{d}\cdot s}{s^{2}\cdot(\tau_{1}+\tau_{2})+s\cdot(1+K_{d}\cdot K_{0}\tau_{2})+K_{d}\cdot K_{0}}.\frac{1}{\frac{s}{\omega_{p}}+1}=\frac{K_{d}\cdot s^{2}\cdot\tau_{2}+K_{d}\cdot s}{s^{3}\frac{(\tau_{1}+\tau_{2})}{\omega_{p}}+s^{2}(\frac{1+K_{d}K_{0}\tau_{2}}{\omega_{p}})+s(\frac{K_{d}K_{0}}{\omega_{p}}+1+K_{d}K_{0}\tau_{2})+K_{d}K_{0}}$
+\begin_inset Formula $\frac{V_{out}(s)}{V_{in}(s)}=\frac{V_{f}(s)}{\theta(s)}.F_{0}(s)=\frac{K_{d}\cdot s^{2}\cdot\tau_{2}+K_{d}\cdot s}{s^{2}\cdot(\tau_{1}+\tau_{2})+s\cdot(1+K_{d}\cdot K_{0}\tau_{2})+K_{d}\cdot K_{0}}.\frac{1}{\frac{s}{\omega_{p}}+1}=\frac{K_{d}\cdot s^{2}\cdot\tau_{2}+K_{d}\cdot s}{s^{3}\frac{(\tau_{1}+\tau_{2})}{\omega_{p}}+s^{2}(\frac{1+K_{d}K_{0}\tau_{2}}{\omega_{p}}+\tau_{1}+\tau_{2})+s(\frac{K_{d}K_{0}}{\omega_{p}}+1+K_{d}K_{0}\tau_{2})+K_{d}K_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula 
+\begin{equation}
+\frac{V_{out}(s)}{V_{in}(s)}=\frac{K_{d}\tau_{2}s^{2}+K_{d}s}{s^{3}\frac{\tau_{1}+\tau_{2}}{\omega_{p}}+s^{2}\frac{1+K_{d}K_{0}\tau_{2}+\omega_{p}(\tau_{1}+\tau_{2})}{\omega_{p}}+s\frac{K_{d}K_{0}+\omega_{p}(1+K_{d}K_{0}\tau_{2})}{\omega_{p}}+K_{d}K_{0}}
+\end{equation}
+
 \end_inset
 
 

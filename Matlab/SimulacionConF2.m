@@ -1,5 +1,5 @@
 %guardo mediciones
-T = readtable('..\medicionesControlTP1\rtaEscalon1.csv','HeaderLines',1);
+T = readtable('..\medicionesControlTP1\rtaEscalon2.csv','HeaderLines',1);
 time = T(:, 1);
 time = table2array(time);
 i=1;
@@ -30,22 +30,23 @@ Cf = 100e-12;
 wf = 1/(Rf*Cf);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Primer caso - Utilizano filtro pasabajos RC%
+%Segundo caso - Utilizano filtro pasabajos RCR%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-offset = 0.07;
-wo1 = 1/(R1*C1);
-eps1 = 0.5*sqrt( wo1/(Kd*K0) );
+offset = 0.08;
+tau1 = C1*R1;
+tau2 = C1*R2;
+eps2 = (1+Kd*K0*tau2) / (2*sqrt(Kd*K0*(tau1+tau2)) );
 s = tf('s');
-num = Kd*K0;
-first_term = (s^3)/(wo1*wf);
-second_term = (s^2)*( (wf+wo1)/(wo1*wf) );
-third_term = s*( (wf+Kd*K0)/wf );
+num = Kd*K0*tau2*s;
+first_term = (s^3)*( (tau1+tau2)/wf );
+second_term = (s^2)*( (1+Kd*K0*tau2+wf*(tau1+tau2))/wf );
+third_term = s*( (Kd*K0+wf*(1+Kd*K0*tau2))/wf );
 fourth_term = Kd*K0;
 den = first_term + second_term + third_term + fourth_term;
 H1 = num/den;
 %Respuesta al escalon
 step_response = step(H1,time,stepDataOptions('StepAmplitude',offset*2));
-step_response = step_response - offset;
+%step_response = step_response - offset;
 %Grafica
 figure(1);
 hold on;
@@ -56,5 +57,6 @@ time = time*1e6;
 plot(time,step_response)
 hold on
 plot(time,v1);
+xlim([0 100]);
 hold off
 grid;
