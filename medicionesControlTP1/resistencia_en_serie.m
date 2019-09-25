@@ -1,16 +1,8 @@
 %guardo mediciones
-close all;
-T = readtable('..\medicionesControlTP1\rtaEscalon2.csv','HeaderLines',1);
-time = T(:, 1);
-time = table2array(time);
-i=1;
-while( time(i) < 0 )
-   i = i+1; 
-end
-time = time(i:end);
-v1 = T(:,3);
-v1 = table2array(v1);
-v1 = v1(i:end);
+%T = readtable('..\medicionesControlTP1\rtaEscalon2.csv','HeaderLines',1);
+%time = T(:, 1);
+time = linspace(0,80e-6,1e6);
+
 %Parametros del demodulador
 Vdd=10;
 %Parametros del PLL
@@ -24,7 +16,7 @@ Kd= Vdd/pi;
 %Parametros del filtro RC
 R1 = 10e3;
 C1 = 1e-9;
-R2 = 1.8e3;
+R2 = 1e6;%'R=500','R=1k', 'R=1.65k', 'R=2k', 'R=3k'
 %Parametros del filtro a la salida
 Rf = 5.6e3;
 Cf = 100e-12;
@@ -36,7 +28,7 @@ wf = 1/(Rf*Cf);
 offset = 0.073;
 tau1 = C1*R1;
 tau2 = C1*R2;
-eps2 = (1+Kd*K0*tau2) / (2*sqrt(Kd*K0*(tau1+tau2)) )
+eps2 = (1+Kd*K0.*tau2) / (2*sqrt(Kd*K0*(tau1+tau2)) )
 s = tf('s');
 num = Kd*K0*(tau2*s+1);
 first_term = 1*( (tau1+tau2)/wf );
@@ -51,17 +43,15 @@ step_response = step(H1,time,stepDataOptions('StepAmplitude',offset));
 %Grafica
 figure(1);
 hold on;
-title('Respuesta al escalón del circuito con F2(s)');
+title('Respuesta al escalón con distintos valores de resistencia');
 ylabel('Vout(volts)');
 xlabel('tiempo(us)');
-time = time*1e6;
+%time = time*1e6;
 plot(time,step_response)
 hold on
-plot(time,v1);
-legend('Teórica', 'Medida');
-xlim([0 100]);
-hold off
-grid;
-[z,p,k] = tf2zp([Kd*K0*tau2 Kd*K0],[first_term second_term third_term fourth_term]);
-[woi] =abs(p);
-H1
+%plot(time,v1);
+legend('R=500','R=1k', 'R=1.65k', 'R=2k', 'R=5k', 'R=100e3','R=1e6');
+xlim([0 80e-6]);
+grid on;
+%[z,p,k] = tf2zp([Kd*K0.*tau2 Kd*K0],[first_term second_term third_term fourth_term]);
+%[woi] =abs(p);
