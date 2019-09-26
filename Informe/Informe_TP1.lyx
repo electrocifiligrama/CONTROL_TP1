@@ -82,6 +82,13 @@
 \begin_body
 
 \begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "caratula.lyx"
+
+\end_inset
+
+
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
 
@@ -137,10 +144,6 @@ Diagrama en bloques genérico de un PLL
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -825,7 +828,7 @@ status open
 \begin_inset Graphics
 	filename Imagenes/med1Ko.png
 	lyxscale 40
-	scale 40
+	scale 50
 
 \end_inset
 
@@ -878,7 +881,7 @@ status open
 \begin_inset Graphics
 	filename Imagenes/MedicionConF1.png
 	lyxscale 40
-	scale 40
+	scale 35
 
 \end_inset
 
@@ -922,7 +925,7 @@ status open
 \begin_inset Graphics
 	filename Imagenes/MedicionConF2.png
 	lyxscale 40
-	scale 40
+	scale 35
 
 \end_inset
 
@@ -995,7 +998,7 @@ status open
 \begin_inset Graphics
 	filename Imagenes/resistenciaserie.png
 	lyxscale 40
-	scale 40
+	scale 35
 
 \end_inset
 
@@ -1010,6 +1013,109 @@ Simulación de la respuesta al escalón para distintos valores de resistencias.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:res-serie-cap"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Esto se verificó además experimentalmente, con un jumper cortocircuitando
+ la resistencia mencionada.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/rtaEscalonsinJumper.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Con resistencia de 
+\begin_inset Formula $1.65k\Omega$
+\end_inset
+
+ en serie.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename Imagenes/rtaEscalonconJumper.png
+	lyxscale 40
+	scale 40
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Sin resistencia en serie.
+\end_layout
 
 \end_inset
 
