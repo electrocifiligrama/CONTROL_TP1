@@ -1061,6 +1061,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Imagenes/rtaEscalonsinJumper.png
 	lyxscale 40
@@ -1101,6 +1102,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 \begin_inset Graphics
 	filename Imagenes/rtaEscalonconJumper.png
 	lyxscale 40
@@ -1132,6 +1134,16 @@ Sin resistencia en serie.
 
 \begin_layout Section
 Conclusiones
+\end_layout
+
+\begin_layout Standard
+Se consiguió satisfactoriamente obtener los parámetros del PLL, condiciéndose
+ los cálculos teóricos con los calculados numéricamente y simulados mediante
+ MATLAB, como así también, se verificó experimentalmente la función de la
+ resistencia en serie al capacitor, que modifica el coeficiente de amortiguamien
+to del circuito.
+ Además, se deduce que el filtro a la salida se utiliza para filtrar la
+ señal de la portadora cuando se utiliza al PLL para demodular/modular FM.
 \end_layout
 
 \end_body
